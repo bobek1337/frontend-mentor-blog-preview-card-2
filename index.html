@@ -1,34 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Blog preview card</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+    <title>Frontend Mentor | Blog preview card</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
+
+        .attribution {
+            font-size: 11px;
+            text-align: center;
+        }
+
+        .attribution a {
+            color: hsl(228, 45%, 44%);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            background-color: hsl(47, 88%, 63%);
+            font-family: "Figtree", serif;
+        }
+
+        .container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .blog-card {
+            background: hsl(0, 0%, 100%);
+            width: 384px;
+            height: 522px;
+            border: 1px solid hsl(0, 0%, 7%);
+            border-radius: 20px;
+            padding: 24px 24px 0 24px;
+            box-shadow: 8px 8px hsl(0, 0%, 7%);
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+        }
+
+        img {
+            border-radius: 10px;
+            width: 100%;
+        }
+
+        .blog-card-content {
+            margin-top: 24px;
+            width: 100%;
+            display: flex;
+            flex-grow: 1;
+            flex-direction: column;
+        }
+
+        .content-tag {
+            background: hsl(47, 88%, 63%);
+            width: max-content;
+            color: hsl(0, 0%, 7%);
+            border-radius: 4px;
+            font-weight: bold;
+        }
+
+        .content-info {
+            margin-top: 12px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .content-tag h4 {
+            font-size: 14px;
+            padding: 4px 12px;
+            font-weight: 800;
+        }
+
+        .blog-card-content h2 {
+            font-size: 24px;
+            color: hsl(0, 0%, 7%);
+            margin-top: 12px;
+            font-weight: 800;
+
+        }
+
+        .blog-card-content p {
+            font-size: 16px;
+            color: hsl(0, 0%, 42%);
+            margin-top: 12px;
+            line-height: 150%;
+        }
+
+        .blog-card-author {
+            width: 100%;
+            margin-bottom: 24px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+        }
+
+        .blog-card-author h4 {
+            font-size: 14px;
+            margin-left: 12px;
+            font-weight: 800;
+        }
+
+        .author-avatar {
+            width: 32px;
+            height: 32px;
+        }
+    </style>
 </head>
 <body>
+<div class="container">
+    <div class="blog-card">
+        <img src="assets/images/illustration-article.svg" alt="">
+        <div class="blog-card-content">
+            <div class="content-tag">
+                <h4>Learning</h4>
+            </div>
 
-  Learning
+            <h4 class="content-info">Published 21 Dec 2023</h4>
 
-  Published 21 Dec 2023
+            <h2>HTML & CSS foundations</h2>
 
-  HTML & CSS foundations
+            <p>These languages are the backbone of every website, defining structure, content, and presentation.</p>
+        </div>
+        <div class="blog-card-author">
+            <img class="author-avatar" src="assets/images/image-avatar.webp" alt="">
+            <h4>Greg Hooper</h4>
+        </div>
+    </div>
+</div>
 
-  These languages are the backbone of every website, defining structure, content, and presentation.
-
-  Greg Hooper
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+<div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="#">Your Name Here</a>.
-  </div>
+</div>
 </body>
 </html>
